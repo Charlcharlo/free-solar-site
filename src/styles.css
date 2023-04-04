@@ -83,7 +83,7 @@
 .body-block {
     width: 100%;
     box-sizing: border-box;
-    padding: 20px 5%;
+    padding: 20px 7%;
     z-index: 2;
 }
 
@@ -103,40 +103,10 @@
     background-color: var(--blueGray);
 }
 
-.info-block {
-    align-items: flex-start;
-    padding: 20px 0;
-}
-
-.info-block .text-block {
-    max-width: calc(100% - 370px);
-}
-
-.dark-paragraph {
-    width: 100%;
-    height: 200px;
-    background-image: url("../public/images/solar-garage.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.dark-paragraph > div {
-    padding-left: 30%;
-    height: 100%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, #05071f 30%);
-}
-
-.dark-paragraph .title,
-.dark-paragraph .paragraph {
-    color: white;
-}
-
 /* Navbar */
 
 #nav-bar {
     background-color: rgba(56, 58, 94, 0.6);
-    /* position: absolute;
-    top: 0; */
     width: 100vw;
     box-sizing: border-box;
 }
@@ -199,7 +169,7 @@
 
 #card-collection {
     align-items: flex-start;
-    padding: 0 calc(5% - 20px);
+    padding: 0 calc(7% - 20px);
 }
 
 .card {
@@ -222,24 +192,7 @@
     text-align: center;
 }
 
-.dark-paragraph {
-    width: 100%;
-    height: 200px;
-    background-image: url("../public/images/solar-garage.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.dark-paragraph .text-block {
-    padding-left: 40px;
-    height: 100%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, #05071f 30%);
-}
-
-.dark-paragraph .title,
-.dark-paragraph .paragraph {
-    color: white;
-}
+/* Light Text Block */
 
 .info-block {
     align-items: flex-start;
@@ -247,7 +200,37 @@
 }
 
 .info-block .text-block {
-    max-width: calc(100% - 370px);
+    max-width: calc(100% - 390px);
+}
+
+/* Dark Text Block */
+
+.dark-paragraph {
+    width: 100%;
+    background-image: url("../public/images/solar-garage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-paragraph > div {
+    padding-left: 30%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, #05071f 30%);
+}
+
+.dark-paragraph .text-block, 
+.dark-paragraph .feature-array {
+    padding-left: 40px;
+}
+
+.dark-paragraph .title,
+.dark-paragraph a {
+    color: white;
+}
+
+.dark-paragraph .paragraph,
+.dark-paragraph li {
+    color: var(--blueGray);
 }
 
 /* Offset Square */
@@ -275,4 +258,41 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+/* Feature Array */
+
+ul {
+    list-style: inside;
+}
+
+.feature-array {
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.feature-array:last-child {
+    margin-bottom: 0;
+}
+
+.feature-array .title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.feature-array > div {
+    text-align: left;
+}
+
+.feature-block {
+    width: 33%;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.vector-icon {
+    height: 3rem;
+    margin-right: 10px;
+    margin-top: 10px;
 }
