@@ -1,10 +1,10 @@
-import NavBar from "./Navbar";
-import CardCollection from "./utils/CardCollection";
-import Title from "./utils/Title";
+import NavBar from "../global/Navbar";
+import CardCollection from "./CardCollection";
+import Title from "../global/Title";
 
 export default function Header() {
     return(
-        <div className="header">
+        <div className="header col-between">
             <NavBar />
             <div className="body-block" id="header-banner">
                 <Title 

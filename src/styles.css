@@ -1,11 +1,11 @@
 @font-face {
-    font-family: quicksand;
-    src: url(./fonts/Quicksand-VariableFont_wght.ttf);
+    font-family: raleway;
+    src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: raleway;
-    src: url(./fonts/Raleway-VariableFont_wght.ttf);
+    font-family: poppins;
+    src: url(./fonts/Poppins-Regular.ttf);
 }
 
 :root {
@@ -14,8 +14,8 @@
     --blueGray: #c7c7d8;
     --blueBlack: #05071f;
 
-    --body-font: raleway;
-    --header-font: quicksand;
+    --body-font: poppins;
+    --header-font: raleway;
 
     --dark-shadow: 0 0 10px var(--blueBlack);
 }
@@ -28,21 +28,52 @@
     box-sizing: border-box;
 }
 
-/* Containers */
+/* Text */
 
-.header {
-    min-height: calc(100vh + 100px);
-    overflow-x: hidden;
-    max-width: 100vw;
-    box-sizing: border-box;
-    background-image: url('../public/images/solar-field.jpg');
-    background-size: cover;
-    /* padding-bottom: 5%; */
+.title {
+    font-family: raleway;
+    font-size: 3rem;
+    color: var(--blueBlack);
+}
 
+.paragraph {
+    text-align: justify;
+}
+
+.text-block .title, 
+.text-block .paragraph {
+    margin-bottom: 10px;
+}
+
+/* Flex templates */
+
+.row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-between {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
+
+.col-around {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Containers */
 
 .full-page {
     min-height: 100vh;
@@ -64,31 +95,6 @@
     box-shadow: 0 0 10px var(--blueBlack);
 }
 
-.square-main {
-    width: 350px;
-    height: 350px;
-}
-
-.square-ylw {
-    width: 320px;
-    height: 320px;
-    box-shadow: var(--dark-shadow);
-    background-color: var(--mainYellow);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.square-img {
-    width: 320px;
-    height: 320px;
-    box-shadow: var(--dark-shadow);
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .ylw-block {
     background-image: linear-gradient(#f8d54b, #d8962c);
 }
@@ -97,26 +103,13 @@
     background-color: var(--blueGray);
 }
 
-.row-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .info-block {
     align-items: flex-start;
     padding: 20px 0;
 }
 
-.text-block {
+.info-block .text-block {
     max-width: calc(100% - 370px);
-}
-
-.row-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .dark-paragraph {
@@ -128,8 +121,6 @@
 }
 
 .dark-paragraph > div {
-    /* float: right; */
-    /* width: 60%; */
     padding-left: 30%;
     height: 100%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, #05071f 30%);
@@ -163,20 +154,6 @@
     text-decoration: none;
 }
 
-/* Text */
-
-.title {
-    font-family: raleway;
-    font-size: 3rem;
-    color: var(--blueBlack);
-    margin-bottom: 10px;
-}
-
-.paragraph {
-    text-align: justify;
-    margin-bottom: 10px;
-}
-
 /* Assets */
 
 .banner-img {
@@ -192,21 +169,18 @@
     box-sizing: border-box;
 }
 
-.fade-gray {
-    height: 100px;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), #e1e1f1);
-}
-
 /* Home ******************************************************/
-
 
 /* Header */
 
-/* #header-banner {
-    position: absolute;
-    top: 25%;
-} */
+.header {
+    min-height: calc(100vh + 100px);
+    overflow-x: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
+    background-image: url('../public/images/solar-field.jpg');
+    background-size: cover;
+}
 
 #header-banner .title {
     text-align: justify;
@@ -215,11 +189,15 @@
     font-size: 4.5rem;
 }
 
+.fade-gray {
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #e1e1f1);
+}
+
 /* Card Collection */
 
 #card-collection {
-    /* position: absolute;
-    bottom: 5%; */
     align-items: flex-start;
     padding: 0 calc(5% - 20px);
 }
@@ -233,11 +211,6 @@
     box-shadow: 0 0 10px var(--blueBlack);
     margin: 0 20px;
     flex-grow: 1;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .card .circle {
@@ -247,4 +220,59 @@
 .card .title {
     font-size: 1.5rem;
     text-align: center;
+}
+
+.dark-paragraph {
+    width: 100%;
+    height: 200px;
+    background-image: url("../public/images/solar-garage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-paragraph .text-block {
+    padding-left: 40px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, #05071f 30%);
+}
+
+.dark-paragraph .title,
+.dark-paragraph .paragraph {
+    color: white;
+}
+
+.info-block {
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.info-block .text-block {
+    max-width: calc(100% - 370px);
+}
+
+/* Offset Square */
+
+.square-main {
+    width: 350px;
+    height: 350px;
+}
+
+.square-ylw {
+    width: 320px;
+    height: 320px;
+    box-shadow: var(--dark-shadow);
+    background-color: var(--mainYellow);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.square-img {
+    width: 320px;
+    height: 320px;
+    box-shadow: var(--dark-shadow);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

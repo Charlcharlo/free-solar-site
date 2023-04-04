@@ -1,7 +1,7 @@
 import '../styles.css';
-import Header from './Header';
-import DarkParagraph from './utils/DarkParagraph';
-import LightParagraph from './utils/LightParagraph';
+import Header from './home/Header';
+import DarkParagraph from './home/DarkParagraph';
+import LightParagraph from './home/LightParagraph';
 // import BannerImage from './utils/BannerImage';
 
 function App() {

@@ -1,4 +1,4 @@
-import Title from "./utils/Title";
+import Title from "./Title";
 
 export default function NavBar() {
     return (
