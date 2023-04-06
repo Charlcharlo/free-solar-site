@@ -12,11 +12,15 @@
     --mainYellow: #f8d54b;
     --mainOrange: #d8962c;
     --blueGray: #c7c7d8;
+    --blueGrayDark: #7c7c88;
     --blueBlack: #05071f;
+
+    --sunset-gradient: linear-gradient(#f8d54b, #d8962c);
 
     --body-font: poppins;
     --header-font: raleway;
 
+    --med-shadow: 0 0 10px var(--blueGrayDark);
     --dark-shadow: 0 0 10px var(--blueBlack);
 }
 
@@ -50,7 +54,7 @@
 .row-between {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 
@@ -58,6 +62,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.row-start {
+    display: flex;
 }
 
 .col-between {
@@ -71,6 +79,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.col-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Containers */
@@ -96,7 +110,7 @@
 }
 
 .ylw-block {
-    background-image: linear-gradient(#f8d54b, #d8962c);
+    background-image: var(--sunset-gradient);
 }
 
 .gray-block {
@@ -108,7 +122,7 @@
 #nav-bar {
     background-color: rgba(56, 58, 94, 0.6);
     width: 100vw;
-    box-sizing: border-box;
+    align-items: center;
 }
 
 #nav-bar .title {
@@ -139,6 +153,27 @@
     box-sizing: border-box;
 }
 
+.std-btn {
+    background-image: var(--sunset-gradient);
+    /* background-color: var(--mainOrange); */
+    color: var(--blueBlack);
+    box-shadow: var(--med-shadow);
+    border: none;
+    padding: 10px 20px;
+    height: 2.5rem;
+    border-radius: 1.75rem;
+    min-width: 100px;
+    text-align: left;
+    font-family: var(--header-font);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.inline-icon {
+    width: 1.5rem;
+    margin: 0 10px;
+}
+
 /* Home ******************************************************/
 
 /* Header */
@@ -147,7 +182,6 @@
     min-height: calc(100vh + 100px);
     overflow-x: hidden;
     max-width: 100vw;
-    box-sizing: border-box;
     background-image: url('../public/images/solar-field.jpg');
     background-size: cover;
 }
@@ -165,6 +199,12 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0), #e1e1f1);
 }
 
+.fade-gray-reverse {
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(#e1e1f1, rgba(0, 0, 0, 0));
+}
+
 /* Card Collection */
 
 #card-collection {
@@ -178,7 +218,7 @@
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 10px var(--blueBlack);
+    box-shadow: var(--dark-shadow);
     margin: 0 20px;
     flex-grow: 1;
 }
@@ -203,29 +243,53 @@
     max-width: calc(100% - 390px);
 }
 
+.align-right .info-block {
+    flex-direction: row-reverse;
+}
+
+/* Why Solar? */
+
+#why-solar {
+    margin-bottom: 20px;
+}
+
+#why-solar .title {
+    margin-bottom: 20px;
+}
+
+#why-solar .circle {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
 /* Dark Text Block */
 
 .dark-paragraph {
     width: 100%;
-    background-image: url("../public/images/solar-garage.jpg");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../public/images/solar-array.jpg");
+    background-size:contain ;
+    background-position-x: right;
 }
 
 .dark-paragraph > div {
-    padding-left: 30%;
+    padding-right: 20%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, #05071f 30%);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) calc(20% - 100px), #05071f 20%);
 }
 
 .dark-paragraph .text-block, 
 .dark-paragraph .feature-array {
-    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .dark-paragraph .title,
 .dark-paragraph a {
     color: white;
+}
+
+.dark-paragraph .title {
+    margin-top: 20px;
 }
 
 .dark-paragraph .paragraph,
@@ -243,7 +307,7 @@
 .square-ylw {
     width: 320px;
     height: 320px;
-    box-shadow: var(--dark-shadow);
+    box-shadow: var(--med-shadow);
     background-color: var(--mainYellow);
     position: absolute;
     bottom: 0;
@@ -253,7 +317,7 @@
 .square-img {
     width: 320px;
     height: 320px;
-    box-shadow: var(--dark-shadow);
+    box-shadow: var(--med-shadow);
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -268,11 +332,6 @@ ul {
 
 .feature-array {
     align-items: flex-start;
-    margin-bottom: 30px;
-}
-
-.feature-array:last-child {
-    margin-bottom: 0;
 }
 
 .feature-array .title {
@@ -291,8 +350,74 @@ ul {
     justify-content: flex-start;
 }
 
+/* Contact */
+
+.contact-section {
+    min-height: calc(100vh + 100px);
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-image: url('../public/images/solar-garage.jpg');
+    background-size: cover;
+}
+
+.contact-block {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: var(--dark-shadow);
+}
+
+.contact-block .title,
+#contact-list {
+    margin-left: 10px;
+}
+
+#contact-form {
+    max-width: 60%;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.contact-input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    resize: none;
+    box-shadow: var(--med-shadow);
+}
+
+#contact-form label.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px 10px 0 10px;
+}
+
+#contact-form .std-btn {
+    margin-top: 10px;
+}
+
+.link {
+    align-items: center;
+}
+
+.link a {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .vector-icon {
-    height: 3rem;
+    height: 2.5rem;
     margin-right: 10px;
     margin-top: 10px;
+    /* filter: drop-shadow(--med-shadow); */
+}
+
+.vector-icon path {
+    fill: var(--blueBlack);
 }
