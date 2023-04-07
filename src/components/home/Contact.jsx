@@ -5,8 +5,8 @@ export default function Contact() {
     return (
         <div className="contact-section">
             <div className="fade-gray-reverse" />
-            <div className="body-block">
-                <div className="contact-block">
+            <div className="body-block contact-block">
+                <div>
                     <h1 className="title">Get in touch</h1>
                     <div className="row-between">
                         <ContactList />

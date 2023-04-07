@@ -1,3 +1,6 @@
+import Cancel from "./icons/Cancel";
+import Send from "./icons/Send";
+
 export default function ContactForm() {
     return (
         <div id="contact-form">
@@ -7,7 +10,14 @@ export default function ContactForm() {
             <input className="contact-input" type="email" name="email-address"/>
             <label className="title" htmlFor="email-body">Message Body</label>
             <textarea className="contact-input" name="email-body" id="" cols="30" rows="10"></textarea>
-            <button className="std-btn">Send</button>
+            <button className="btn btn-ylw">
+                Send
+                <Send />
+            </button>
+            <button className="btn">
+                Cancel
+                <Cancel />
+            </button>
         </div>
     )
 }
