@@ -21,6 +21,8 @@
     --blueBlack: #04102c;
     --bright-blue: #124369;
 
+    --transparent-blue: rgba(56, 58, 94, 0.8);
+
     --sunset-gradient: linear-gradient(var(--mainYellow), var(--mainOrange));
     --sunset-edge: inset 0 0 10px var(--mainOrange);
 
@@ -29,7 +31,10 @@
     --sub-font: quicksand;
 
     --med-shadow: 0 0 10px var(--blueGrayDark);
+    --med-shadow-inset: inset 0 0 10px var(--blueGrayDark);
+
     --dark-shadow: 0 0 10px var(--blueBlack);
+    --dark-shadow-inset: inset 0 0 10px var(--blueBlack);
 }
 
 * {
@@ -134,7 +139,7 @@ a, button {
 /* Navbar */
 
 #nav-bar {
-    background-color: rgba(56, 58, 94, 0.6);
+    background-color: var(--transparent-blue);
     width: 100vw;
     align-items: center;
 }
@@ -185,14 +190,15 @@ a, button {
 
 .btn {
     background-color: var(--blueGray);
-    box-shadow: var(--med-shadow);
+    /* box-shadow: var(--dark-shadow); */
     color: var(--blueBlack);
-    border: 1px solid var(--blueBlack);
-    padding: 5px 10px;
+    /* border: 1px solid var(--blueBlack); */
+    border: none;
+    padding: 10px 20px;
     border-radius: 10px;
-    min-width: 100px;
-    font-family: var(--header-font);
-    font-size: 1rem;
+    min-width: 8rem;
+    font-family: var(--sub-font);
+    font-size: 1.2rem;
     font-weight: bold;
     float: right;
     display: flex;
@@ -202,7 +208,6 @@ a, button {
 
 .btn-ylw {
     background-color: var(--mainYellow);
-    box-shadow: var(--med-shadow);
 }
 
 .btn > .vector-icon {
@@ -398,7 +403,6 @@ ul {
 }
 
 .contact-block {
-    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: var(--dark-shadow);
     margin-top: 60px;
 }
@@ -406,18 +410,24 @@ ul {
 .contact-block > div{
     width: 100%;
     /* border-radius: 10px; */
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
-.contact-block .title,
 #contact-list {
-    margin-left: 10px;
+    padding: 20px;
+    padding-left: calc(5% + 20px);
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 40%;
+    flex-grow: 1;
 }
 
 #contact-form {
+    padding: 20px;
+    padding-right: calc(5% + 20px);
+    padding-left: 40px;
     max-width: 60%;
     flex-grow: 1;
-    margin: 10px;
+    background-color: var(--transparent-blue);
 }
 
 .contact-input {
@@ -428,19 +438,20 @@ ul {
     padding: 10px;
     margin: 10px 0;
     resize: none;
-    box-shadow: var(--med-shadow);
+    box-shadow: var(--med-shadow-inset);
 }
 
 #contact-form label.title {
-    font-size: 1.2rem;
+    color: white;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 10px 10px 0 10px;
 }
 
 #contact-form .btn {
     margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+    margin-left: 20px;
+    /* margin-bottom: 20px; */
 }
 
 

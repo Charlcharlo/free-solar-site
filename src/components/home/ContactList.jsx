@@ -13,6 +13,7 @@ export default function ContactList() {
 
     return (
         <div className="" id="contact-list">
+                <h1 className="title">Get in touch</h1>
             { contactLinks.map(renderLinks) }
         </div>
     )
