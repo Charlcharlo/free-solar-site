@@ -5,24 +5,31 @@ import LightParagraph from './home/LightParagraph';
 import { aboutUs, placeholder, whySolar } from '../data/home'
 import WhySolar from './home/WhySolar';
 import Contact from './home/Contact';
+import BackToTop from './global/BackToTop';
+import FlexProvider from './global/FlexContext';
 // import BannerImage from './utils/BannerImage';
 
 function App() {
   return (
-    <div className="App">
+    <FlexProvider>
+      <BackToTop />
       <Header />
       <div className="full-page">
-        <LightParagraph 
-          title={aboutUs.title}
-          body={aboutUs.body}
-          url={aboutUs.image}
-        />
+        <div id="about">
+          <LightParagraph 
+            title={aboutUs.title}
+            body={aboutUs.body}
+            url={aboutUs.image}
+          />
+        </div>
         <WhySolar 
           title={whySolar.title}
           reasons={whySolar.reasons}
         />
-        <DarkParagraph />
-        <div className="align-right">
+        <div id="options">
+          <DarkParagraph />
+        </div>
+        <div className="align-right" id="rebates">
           <LightParagraph 
             title={placeholder.title}
             body={placeholder.body}
@@ -31,7 +38,7 @@ function App() {
         </div>
         <Contact />
       </div>
-    </div>
+    </FlexProvider>
   );
 }
 

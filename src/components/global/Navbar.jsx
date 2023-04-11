@@ -1,16 +1,38 @@
+import { Menu } from "@mui/icons-material";
+import { Collapse } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useFlex } from "./FlexContext";
+import NavLinks from "./NavLinks";
 import Title from "./Title";
 
 export default function NavBar() {
+    const flex = useFlex();
+    const [menuVis, setMenuVis] = useState(false);
+
     return (
         <nav className="body-block row-between gray-block" id="nav-bar">
             <Title text="FreeSolarZA" />
-            <div className="row-between">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Products</a>
-                <a href="">Tax Rebates</a>
-                <a href="">Contact</a>
-            </div>
+            {flex &&
+                <button
+                    className="invisibutton" 
+                    onClick={() => {
+                        setMenuVis((preval) => {
+                            return !preval
+                        })
+                    }}
+                >
+                    <Menu />
+                </button> 
+            }
+            { 
+                !flex ? 
+                <NavLinks /> :
+                <div className="flexed-nav">
+                    <Collapse in={menuVis}>
+                        <NavLinks />
+                    </Collapse>
+                </div>
+            }
         </nav>
     )
 }
