@@ -1,6 +1,6 @@
 import { Menu } from "@mui/icons-material";
 import { Collapse } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useFlex } from "./FlexContext";
 import NavLinks from "./NavLinks";
 import Title from "./Title";
@@ -21,7 +21,7 @@ export default function NavBar() {
                         })
                     }}
                 >
-                    <Menu />
+                    <Menu fontSize="large"/>
                 </button> 
             }
             { 

@@ -357,7 +357,6 @@ a, button {
 
 .info-block .text-block {
     max-width: calc(100% - 390px);
-    min-width: 500px;
 }
 
 .align-right .info-block {
@@ -365,10 +364,6 @@ a, button {
 }
 
 /* Why Solar? */
-
-#why-solar {
-    margin-bottom: 20px;
-}
 
 #why-solar .title {
     margin-bottom: 20px;
@@ -378,6 +373,12 @@ a, button {
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
+}
+
+.reason {
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 /* Dark Text Block */
@@ -461,7 +462,8 @@ ul {
 }
 
 .feature-block {
-    width: 33%;
+    width: 300px;
+    margin-bottom: 20px;
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: flex-start;
@@ -521,6 +523,7 @@ ul {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 10px 10px 0 10px;
+    font-family: var(--sub-font);
 }
 
 #contact-form .btn {
@@ -583,18 +586,116 @@ ul {
         font-size: 2rem;
         text-align: left;
     }
-}
 
-/* Light paragraph  */
+    /* Light paragraph  */
 
     .info-block {
-        align-items: center;
+        justify-content: center;
     }
 
     .info-block .text-block {
         max-width: 100%;
+        margin-bottom: 20px;
     }
 
-@media (max-width: 800px) {
+    .square-main {
+        width: 300px;
+        height: 300px;
+    }
 
+    /* Why Solar? */
+
+    #why-solar .title {
+        text-align: center;
+    }
+
+    #why-solar > div {
+        justify-content: space-evenly;
+    }
+
+    /* Dark Paragraph */
+
+    .dark-paragraph .text-block, 
+    .dark-paragraph .feature-array {
+        padding-right: 0;
+    }
+
+    /* Contact form */
+
+    #contact-form, #contact-list {
+        max-width: 100%;
+        padding: 20px 7%;
+    }
+
+    #contact-form {
+        flex-grow: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    #header-banner .title {
+        font-size: 3.5rem;
+    }
+
+    .card .circle {
+        margin-right: 10px;
+    }
+
+    .card .title {
+        max-width: calc(100% - 130px);
+    }
+
+    /* Dark Paragraph */
+
+    .dark-paragraph {
+        background-size: 100%;
+        /* background-position-x: center; */
+        background-position-y: calc(100% - 500px);
+    }
+    
+    .dark-paragraph > div {
+        /* visibility: hidden; */
+        padding-right: 7%;
+        padding-bottom: calc(20% + 100px);
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0) calc(15% - 100px), #05071f 15%);
+    }
+}
+
+@media (max-width: 700px) {
+    #why-solar > div,
+    .feature-array {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .paragraph {
+        text-align: left;
+    }
+    #header-banner .title {
+        font-size: 3rem;
+    }
+
+    .card {
+        padding: 5px;
+    }
+
+    .card .title {
+        font-size: 1.5rem;
+    }
+
+    /* Dark paragraph */
+
+    .dark-paragraph {
+        background-position-y: calc(100% - 400px);
+    }
+
+    .dark-paragraph > div {
+        padding-bottom: calc(50% + 100px);
+    }
 }
