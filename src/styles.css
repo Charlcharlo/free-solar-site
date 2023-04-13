@@ -52,6 +52,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--blueGray);
 }
 
 a, button {
@@ -302,7 +303,7 @@ a, button {
     background-size: cover;
 }
 
-#header-banner .title {
+.header h1.title {
     /* text-align: justify; */
     color: #fff6d3;
     text-shadow: 0 0 10px var(--blueBlack);
@@ -637,7 +638,7 @@ ul {
         font-size: 2.5rem;
     }
 
-    #header-banner .title {
+    .header h1.title {
         font-size: 3.5rem;
     }
 
@@ -677,7 +678,7 @@ ul {
     .paragraph {
         text-align: left;
     }
-    #header-banner .title {
+    .header h1.title {
         font-size: 3rem;
     }
 
@@ -698,4 +699,93 @@ ul {
     .dark-paragraph > div {
         padding-bottom: calc(50% + 100px);
     }
+}
+
+/* Products */
+
+#products-header {
+    background-image: url(../public/images/field-top-view.jpg);
+    min-height: 25vh;
+}
+
+.product-collection {
+    padding: 20px calc(7% - 20px);
+
+}
+
+.product-collection > .title {
+    margin-left: 20px;
+}
+
+.product-track {
+    overflow-x: scroll;
+    padding: 0 10px;
+}
+
+.small-fade-L {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(7% - 20px);
+    z-index: 3;
+    background-image: linear-gradient(to right, var(--blueGray), rgba(0, 0, 0, 0));
+}
+
+.small-fade-R {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: calc(7% - 20px);
+    /* background-color: var(--mainYellow); */
+    background-image: linear-gradient(to left, var(--blueGray), rgba(0, 0, 0, 0));
+}
+
+.product-track::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    box-shadow: var(--dark-shadow);
+    margin: 20px 10px;
+    flex-shrink: 0;
+}
+
+.product-card img {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-card > div {
+    height: 120px;
+    padding: 10px;
+}
+
+.product-card:hover {
+    width: 260px;
+    height: 310px;
+    margin: 15px 5px;
+}
+
+.product-card:hover > div {
+    height: 130px;
+}
+
+.product-card .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.price {
+    color: var(--bright-blue);
+    font-family: var(--sub-font);
+    font-size: 1.2rem;
+    text-align: right;
 }
