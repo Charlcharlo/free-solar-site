@@ -4,7 +4,7 @@ import Card from "./Card"
 
 export default function CardTrack({products}) {
     const ref = useRef();
-    const { events } = useDraggable(ref);
+    const { events } = useDraggable(ref, {applyRubberBandEffect:true});
 
     function renderCards(card) {
         return(

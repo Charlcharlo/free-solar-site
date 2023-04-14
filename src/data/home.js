@@ -93,9 +93,28 @@ export const contactLinks = [
     {
         text: "xxx-xxx-xxxx",
         icon: "phone"
-    },
-    {
-        text: "Facebook",
-        icon: "facebook"
     }
 ]
+
+export const contactInfo = {
+    phone: [
+        {
+            number: "+27748391142"
+        },
+        {
+            number: "+27639646463"
+        }
+    ],
+    email: [
+        {
+            address: "support@freesolarza.co.za"
+        },
+        {
+            address: "sales@freesolarza.co.za"
+        },
+    ],
+    location: {
+        text: ["476 Felstead Rd", "North Riding", "Roodepoort", "Gauteng", "2169"],
+        url: "https://goo.gl/maps/HykoDP2Lt5mjaBch8"
+    }
+}

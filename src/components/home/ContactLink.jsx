@@ -1,5 +1,5 @@
 import Email from "./icons/Email";
-import Facebook from "./icons/Facebook";
+import Facebook from "./icons/Location";
 import Phone from "./icons/Phone";
 
 export default function ContactLink(props) {
