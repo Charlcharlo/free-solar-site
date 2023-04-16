@@ -2,7 +2,7 @@ import '../styles.css';
 import Header from './home/Header';
 import DarkParagraph from './home/DarkParagraph';
 import LightParagraph from './home/LightParagraph';
-import { aboutUs, placeholder, whySolar } from '../data/home'
+import { aboutUs, incentives, whySolar } from '../data/home'
 import WhySolar from './home/WhySolar';
 import Contact from './home/Contact';
 import BackToTop from './global/BackToTop';
@@ -19,7 +19,10 @@ function Home() {
           <LightParagraph 
             title={aboutUs.title}
             body={aboutUs.body}
-            url={aboutUs.image}
+            image={aboutUs.image}
+            url={aboutUs.url}
+            newTab={aboutUs.newTab}
+            linkText={aboutUs.linkText}
           />
         </div>
         <WhySolar 
@@ -31,9 +34,12 @@ function Home() {
         </div>
         <div className="align-right" id="rebates">
           <LightParagraph 
-            title={placeholder.title}
-            body={placeholder.body}
-            url={placeholder.image}
+            title={incentives.title}
+            body={incentives.body}
+            image={incentives.image}
+            url={incentives.url}
+            newTab={incentives.newTab}
+            linkText={incentives.linkText}
           />
         </div>
         <Contact />

@@ -1,6 +1,6 @@
 export default function Feature(props) {
-    function mapList(item) {
-        return <li>{item}</li>
+    function mapList(item, i) {
+        return <li key={i}>{item}</li>
     }
     return (
         <div className="row-between feature-block">
@@ -10,7 +10,6 @@ export default function Feature(props) {
                 <ul>
                     {props.features.map(mapList)}
                 </ul>
-                <a href={props.link}>Learn More</a>
             </div>
         </div>
     )

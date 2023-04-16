@@ -1,10 +1,12 @@
 import SolarReason from "./SolarReason"
 
 export default function WhySolar(props) {
-    function renderReasons(reason) {
+    function renderReasons(reason, i) {
         return (
-            <SolarReason 
+            <SolarReason
+                key={i}
                 title={reason.text}
+                icon={reason.icon}
             />
         )
     }

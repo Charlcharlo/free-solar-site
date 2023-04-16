@@ -7,7 +7,10 @@ export const placeholder = {
 export const aboutUs = {
     title: "On a mission to provide renewable energy for all",
     body: "FreeSolarZA was founded in 2021 with the goal of getting our country tapped into the sun and as off the grid as possible. After researching the best way to provide renewable energy to his home, our founder, Ivan Minev, soon saw he could use his findings and expertise to help many more people do the same. To date, FreeSolarZA has helped homes and businesses alike move towards a more sustainable future by overseeing the construction and maintenance of solar wifi hotspots, off-the-grid security cameras, as well as full-scale solar conversions so that you never have to worry about grid instability again.",
-    image: "./images/solar-installation.jpg"
+    image: "./images/solar-installation.jpg",
+    url: "/#contact",
+    linkText: "Get in touch",
+    newTab: false
 }
 
 export const whySolar = {
@@ -15,15 +18,19 @@ export const whySolar = {
     reasons: [
         {
             text: "Return on Investment",
+            icon: "./images/icons/cash-bag.svg"
         },
         {
-            text: "Eliminate Electricity Bills"
+            text: "Eliminate Electricity Bills",
+            icon: "./images/icons/cash-off.svg"
         },
         {
-            text: "Energy Independence"
+            text: "Renewable Energy Source",
+            icon: "./images/icons/energy-savings-leaf.svg"
         },
         {
-            text: "Renewable Energy Source"
+            text: "Energy Independence",
+            icon: "./images/icons/pylon-off.svg"
         }
     ]
 }
@@ -49,14 +56,23 @@ export const specialProducts = [
     },
     {
         title: "Self-timing lamps",
-        icon: "./images/icons/street-light.svg",
+        icon: "./images/icons/floor-lamp.svg",
         features: [
             "Low-maintenance",
             "Remote controlled",
-            "Ideal for gardens, driveways and parks"
+            "Work great for indoors as well as outside"
         ]
     }
 ]
+
+export const incentives = {
+    title: "Take advantage of tax incentives for your new solar system",
+    body: "Due to the energy crisis in this country reaching critical levels, the government is offering incentives for those who wish to go off the grid. Individuals can claim a rebate of 25% of the cost of new and unused solar photovoltaic (PV) panels, up to a maximum of R15 000 per individual. We at FreeSolar are passionate about getting you the best deal and will help you claim your money back by taking advantage of these incentives. Please note that they will only be available for the next year, so take advantage of them while you still can.",
+    image: "./images/nhh.jpg",
+    url: "https://www.treasury.gov.za/documents/National%20Budget/2023/2023%20Budget%20FAQs%20-%20Solar%20Panel%20Tax%20Incentive.pdf",
+    linkText: "Learn More",
+    newTab: true
+}
 
 export const panelOptions = [
     {

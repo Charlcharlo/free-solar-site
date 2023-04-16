@@ -5,15 +5,15 @@ import Phone from "./icons/Phone"
 
 export default function ContactList() {
 
-    function renderPhone({number}) {
+    function renderPhone({number}, i) {
         return (
-            <a href={`tel:${number}`}>{number}</a>
+            <a key={`numbers-${i}`} href={`tel:${number}`}>{number}</a>
         )
     }
 
-    function renderEmail({address}) {
+    function renderEmail({address}, i) {
         return (
-            <a href={`mailto:${address}`}>{address}</a>
+            <a key={`emails-${i}`} href={`mailto:${address}`}>{address}</a>
         )
     }
 
@@ -40,20 +40,15 @@ export default function ContactList() {
                             target="_blank" 
                             rel="noopener noreferrer"
                         >
-                            {contactInfo.location.text.map((line) => {
+                            {contactInfo.location.text.map((line, i) => {
                                 return (
-                                    <span>
+                                    <span key={`location-line-${i}`}>
                                         {line}
                                         <br />
                                     </span>
                                 )
                             })}
                         </a>
-                        <img 
-                            className="map-img"
-                            src="./images/map.png"
-                            alt=""
-                        />
                     </div>
                 </div>
         </div>

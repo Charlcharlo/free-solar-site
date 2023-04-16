@@ -27,7 +27,7 @@ export default function ContactForm() {
     return (
         <div id="contact-form">
             <h1 className="title">Or Send Us an Email</h1>
-            <form classname="col-start" ref={form} onSubmit={sendEmail}>
+            <form className="col-start" ref={form} onSubmit={sendEmail}>
                 <label className="title" htmlFor="from_name">Your Name</label>
                 <input 
                     className="contact-input" 
@@ -46,20 +46,22 @@ export default function ContactForm() {
                     name="message" 
                     rows="15" 
                 />
-                <button 
-                    className="btn btn-ylw"
-                    type="submit"
-                >
-                    Send
-                    <Send />
-                </button>
-                <button 
-                    className="btn"
-                    type="reset"
-                >
-                    Clear
-                    <Cancel />
-                </button>
+                <div className="row-right">
+                    <button 
+                        className="btn btn-ylw"
+                        type="submit"
+                    >
+                        Send
+                        <Send />
+                    </button>
+                    <button 
+                        className="btn"
+                        type="reset"
+                    >
+                        Clear
+                        <Cancel />
+                    </button>
+                </div>
             </form>
         </div>
     )

@@ -1,9 +1,10 @@
 import Feature from "./Feature"
 
 export default function FeatureArray({list}) {
-    function renderItems(item) {
+    function renderItems(item, i) {
         return (
-            <Feature 
+            <Feature
+                key={i} 
                 title={item.title}
                 icon={item.icon}
                 features={item.features}
