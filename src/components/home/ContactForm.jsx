@@ -13,9 +13,10 @@ export default function ContactForm() {
     function sendEmail(e) {
         e.preventDefault();
         setWidgetIn(true);
+        setDone(false);
 
         emailjs.sendForm(
-            'service_5tr5afe', 
+            'service_m2p3mij', 
             'template_fzh834j', 
             form.current,
             'luFVC0zC_utdvFlpA'
