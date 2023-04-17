@@ -23,7 +23,7 @@ export default function BackToTop() {
             className="back-up"
 
         >
-            <Zoom in={scrollPosition > 800 ? true : false}>
+            <Zoom className="clear-block" in={scrollPosition > 800 ? true : false}>
                 <div>
                     <a className="row-between" href="/#nav-bar">
                         <span>Back To Top</span>

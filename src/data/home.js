@@ -18,19 +18,19 @@ export const whySolar = {
     reasons: [
         {
             text: "Return on Investment",
-            icon: "./images/icons/cash-bag.svg"
+            icon: "cash"
         },
         {
             text: "Eliminate Electricity Bills",
-            icon: "./images/icons/cash-off.svg"
+            icon: "nocash"
         },
         {
             text: "Renewable Energy Source",
-            icon: "./images/icons/energy-savings-leaf.svg"
+            icon: "leaf"
         },
         {
             text: "Energy Independence",
-            icon: "./images/icons/pylon-off.svg"
+            icon: "pylon"
         }
     ]
 }
@@ -60,7 +60,37 @@ export const specialProducts = [
         features: [
             "Low-maintenance",
             "Remote controlled",
-            "Work great for indoors as well as outside"
+            "Work great indoors as well as outside"
+        ]
+    }
+]
+
+export const specialProductsTest = [
+    {
+        title: "Solar Wifi Tower",
+        icon: "wifi",
+        features: [
+            "Off the grid wifi",
+            "low maintenance",
+            "range of up to 20km"
+        ]
+    },
+    {
+        title: "Off-grid Cameras",
+        icon: "camera",
+        features: [
+            "Live monitoring",
+            "Remote Storage",
+            "Solar powered"
+        ]
+    },
+    {
+        title: "Self-timing lamps",
+        icon: "light",
+        features: [
+            "Low-maintenance",
+            "Remote controlled",
+            "Work great indoors as well as outside"
         ]
     }
 ]

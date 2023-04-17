@@ -1,14 +1,18 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 import Cancel from "./icons/Cancel";
 import Send from "./icons/Send";
+import EmailProgress from "./EmailProgress";
 
 export default function ContactForm() {
+    const [widgetIn, setWidgetIn] = useState(false);
+    const [done, setDone] = useState(false);
     const form = useRef();
 
     function sendEmail(e) {
         e.preventDefault();
+        setWidgetIn(true);
 
         emailjs.sendForm(
             'service_5tr5afe', 
@@ -18,14 +22,20 @@ export default function ContactForm() {
         )
         .then((result) => {
             e.target.reset();
+            setDone(true);
             console.log(result.text);
         }, (error) => {
             console.log(error.text);
         });
     }
 
+    function closeWidget() {
+        setWidgetIn(false);
+    }
+
     return (
         <div id="contact-form">
+            { widgetIn && <EmailProgress done={done} close={closeWidget} /> }
             <h1 className="title">Or Send Us an Email</h1>
             <form className="col-start" ref={form} onSubmit={sendEmail}>
                 <label className="title" htmlFor="from_name">Your Name</label>
@@ -44,7 +54,7 @@ export default function ContactForm() {
                 <textarea 
                     className="contact-input" 
                     name="message" 
-                    rows="15" 
+                    rows="10" 
                 />
                 <div className="row-right">
                     <button 
