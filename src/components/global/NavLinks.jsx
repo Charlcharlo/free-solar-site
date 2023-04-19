@@ -3,6 +3,7 @@ export default function NavLinks() {
         <div>
             <a href="/">Home</a>
             <a href="/#about">About</a>
+            <a href="/products">Products</a>
             <a href="/#rebates">Tax Rebates</a>
             <a href="/#contact">Contact</a>
         </div>

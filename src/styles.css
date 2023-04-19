@@ -226,7 +226,9 @@ a, button {
 
 #nav-bar .title {
     font-size: 2rem;
+    font-weight: 700;
     color: var(--mainYellow);
+    margin: 0;
 }
 
 #nav-bar a {
@@ -793,3 +795,128 @@ textarea.contact-input {
     }
 }
 
+/* Products */
+
+#products-header {
+    background-image: url(../public/images/field-top-view.jpg);
+    min-height: 25vh;
+}
+
+.product-collection {
+    padding: 20px calc(7% - 20px);
+
+}
+
+.product-collection > .title {
+    margin-left: 20px;
+}
+
+.product-track {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0 10px;
+}
+
+.small-fade-L {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(7% - 15px);
+    z-index: 3;
+    background-image: linear-gradient(to right, var(--blueGray), rgba(0, 0, 0, 0));
+}
+
+.small-fade-R {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: calc(7% - 15px);
+    /* background-color: var(--mainYellow); */
+    background-image: linear-gradient(to left, var(--blueGray), rgba(0, 0, 0, 0));
+}
+
+.product-track::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    box-shadow: var(--dark-shadow);
+    margin: 20px 10px;
+    flex-shrink: 0;
+}
+
+.product-card img {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-card > div {
+    height: 120px;
+    padding: 10px;
+}
+
+.product-card:hover {
+    width: 260px;
+    height: 310px;
+    margin: 15px 5px;
+}
+
+.product-card:hover > div {
+    height: 130px;
+}
+
+.product-card .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.price {
+    color: var(--bright-blue);
+    font-family: var(--sub-font);
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.round-button {
+    position: absolute;
+    z-index: 4;
+    top: 200px;
+    border: none;
+    offset: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--blueGray);
+    box-shadow: var(--med-shadow-inset), var(--dark-shadow);
+    color: var(--blueBlack);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-button:disabled {
+    color: var(--blueGrayDark);
+    cursor:default !important;
+
+}
+
+.product-collection:hover .round-button {
+    display: flex;
+}
+
+.next-button {
+    right: calc(7% - 35px);
+}
+
+.prev-button {
+    left: calc(7% - 25px);
+}

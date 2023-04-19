@@ -3,7 +3,6 @@ import { Collapse } from "@mui/material";
 import { useState } from "react";
 import { useFlex } from "./FlexContext";
 import NavLinks from "./NavLinks";
-import Title from "./Title";
 
 export default function NavBar() {
     const flex = useFlex();
@@ -11,7 +10,7 @@ export default function NavBar() {
 
     return (
         <nav className="body-block row-between gray-block" id="nav-bar">
-            <Title text="FreeSolarZA" />
+            <a className="title" href="/">FreeSolarZA</a>
             {flex &&
                 <button
                     className="invisibutton" 
