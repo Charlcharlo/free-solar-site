@@ -18,7 +18,7 @@ export default function ContactList() {
     }
 
     return (
-        <div className="" id="contact-list">
+        <div id="contact-list">
                 <h1 className="title">Get in touch</h1>
                 <div className="row-start link">
                     <Phone />

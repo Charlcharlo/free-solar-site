@@ -113,6 +113,7 @@ a, button {
     width: 100%;
     display: flex;
     justify-content: right;
+    flex-wrap: wrap;
 }
 
 .col-between {
@@ -858,15 +859,20 @@ textarea.contact-input {
     flex-shrink: 0;
 }
 
-.product-card img {
+.product-card > div:first-child {
     height: 170px;
     width: 100%;
-    object-fit: cover;
 }
 
-.product-card > div {
+.product-card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.product-card > div:last-child {
     border-top: 1px solid var(--blueGrayDark);
-    height: 120px;
+    height: 130px;
     padding: 10px;
 }
 
@@ -876,7 +882,7 @@ textarea.contact-input {
     margin: 15px 5px;
 }
 
-.product-card:hover > div {
+.product-card:hover > div:last-child {
     height: 130px;
 }
 
@@ -899,9 +905,9 @@ textarea.contact-input {
     top: 200px;
     border: none;
     offset: 50%;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
     background-color: var(--blueGray);
     box-shadow: var(--med-shadow-inset), var(--dark-shadow);
     color: var(--blueBlack);
@@ -921,11 +927,11 @@ textarea.contact-input {
 }
 
 .next-button {
-    right: calc(7% - 35px);
+    right: calc(7% - 50px);
 }
 
 .prev-button {
-    left: calc(7% - 25px);
+    left: calc(7% - 50px);
 }
 
 /* Product Template */
@@ -935,8 +941,8 @@ textarea.contact-input {
 }
 
 .product-image {
-    height: 300px;
-    /* width: 300px; */
+    /* height: 300px; */
+    width: 300px;
     margin: 0 0 20px 20px;
     border-radius: 10px;
     box-shadow: var(--dark-shadow);
@@ -955,6 +961,7 @@ textarea.contact-input {
 /* Contact Modal */
 
 .modal {
+    background-color: var(--blueGray);
     margin: 40px 10% 60px;
     width: 80vw;
     height: calc(100vh - 100px);
@@ -1000,4 +1007,35 @@ textarea.contact-input {
     margin-bottom: 10px;
     font-size: 2rem;
     color: var(--dark-blue);
+}
+
+@media (max-width: 800px) {
+    .modal {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    .modal #contact-form, .modal-phone {
+        padding: 20px;
+    }
+
+    .modal #contact-form .title {
+        margin-right: 30px;
+    }
+
+    .modal .invisibutton {
+        right: 20px;
+    }
+
+    .modal .btn {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-image {
+        float: none;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
 }

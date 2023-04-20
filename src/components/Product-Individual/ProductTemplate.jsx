@@ -1,5 +1,6 @@
 import { Modal } from "@mui/material";
 import { useState } from "react";
+import FlexProvider from "../global/FlexContext";
 import NavBar from "../global/Navbar";
 import ContactModal from "./ContactModal";
 
@@ -11,6 +12,7 @@ export default function ProductTemplate({info}) {
     }
 
     return (
+    <FlexProvider>
         <div className="full-page" id="product-template">
             <NavBar />
             <div className="body-block">
@@ -32,5 +34,6 @@ export default function ProductTemplate({info}) {
                 />
             </Modal>
         </div>
+    </FlexProvider>
     )
 }
