@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Home from "./Home";
 import Products from "./Products"
-import { standalone } from '../data/products';
+import { standalone, extras, conversions, onGrid } from '../data/products';
 import ProductTemplate from './Product-Individual/ProductTemplate';
 
 export default function App() {
@@ -21,6 +21,9 @@ export default function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/products" element={<Products />} />
                 {standalone.map(renderRoute)}
+                {onGrid.map(renderRoute)}
+                {conversions.map(renderRoute)}
+                {extras.map(renderRoute)}
             </Routes>
         </Router>
     )
