@@ -7,13 +7,13 @@ export default function ContactList() {
 
     function renderPhone({number}, i) {
         return (
-            <a key={`numbers-${i}`} href={`tel:${number}`}>{number}</a>
+            <a className="contact-link" key={`numbers-${i}`} href={`tel:${number}`}>{number}</a>
         )
     }
 
     function renderEmail({address}, i) {
         return (
-            <a key={`emails-${i}`} href={`mailto:${address}`}>{address}</a>
+            <a className="contact-link" key={`emails-${i}`} href={`mailto:${address}`}>{address}</a>
         )
     }
 
@@ -36,6 +36,7 @@ export default function ContactList() {
                     <Location />
                     <div>
                         <a 
+                            className="contact-link"
                             href={contactInfo.location.url}
                             target="_blank" 
                             rel="noopener noreferrer"

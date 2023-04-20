@@ -14,7 +14,7 @@ export default function ContactLink(props) {
            <Phone /> :
            null
         }
-        <a href={props.link}>{props.text}</a>
+        <a className="contact-link" href={props.link}>{props.text}</a>
      </div>
  )
 }

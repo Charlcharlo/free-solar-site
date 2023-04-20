@@ -1,7 +1,7 @@
 export default function Card(props) {
     return (
         <div className="product-card" id={props.id}>
-            <img src={props.imgUrl} alt="" onDragStart={(e) => {
+            <img src={window.location.origin + props.imgUrl} alt="" onDragStart={(e) => {
                 e.preventDefault();
             }} />
             <div className="col-between">

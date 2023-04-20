@@ -24,6 +24,7 @@
     --blueBlack: #04102c;
     --bright-blue: #124369;
     --bright-blue-focus: #205d8b;
+    --dark-blue: rgb(56, 58, 94);
 
     --transparent-blue: rgba(56, 58, 94, 0.8);
     --transparent-white: rgba(255, 255, 255, 0.8);
@@ -54,6 +55,8 @@
 html {
     scroll-behavior: smooth;
     background-color: var(--blueGray);
+    overflow-x: hidden;
+
 }
 
 a, button {
@@ -70,6 +73,8 @@ a, button {
 
 .paragraph {
     text-align: justify;
+    white-space: pre-wrap;
+    
 }
 
 .text-block .title, 
@@ -132,12 +137,14 @@ a, button {
 /* Containers */
 
 .full-page {
+    max-width: 100vw;
+    overflow-x: hidden;
     min-height: 100vh;
     background-color: var(--blueGray);
 }
 
 .body-block {
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     padding: 20px 7%;
     z-index: 2;
@@ -607,12 +614,10 @@ textarea.contact-input {
 
 
 .link {
-    /* height: 3rem; */
-    /* align-items: center; */
     padding: 10px 0;
 }
 
-.link a {
+.contact-link {
     text-decoration: none;
     display: block;
     color: var(--bright-blue);
@@ -637,7 +642,7 @@ textarea.contact-input {
     fill: var(--bright-blue);
 }
 
-.link a:hover {
+.contact-link:hover {
     color:var(--bright-blue-focus);
 }
 
@@ -800,11 +805,12 @@ textarea.contact-input {
 #products-header {
     background-image: url(../public/images/field-top-view.jpg);
     min-height: 25vh;
+    overflow-x: hidden;
 }
 
 .product-collection {
     padding: 20px calc(7% - 20px);
-
+    overflow-x: hidden;
 }
 
 .product-collection > .title {
@@ -859,6 +865,7 @@ textarea.contact-input {
 }
 
 .product-card > div {
+    border-top: 1px solid var(--blueGrayDark);
     height: 120px;
     padding: 10px;
 }
@@ -919,4 +926,78 @@ textarea.contact-input {
 
 .prev-button {
     left: calc(7% - 25px);
+}
+
+/* Product Template */
+
+#product-template #nav-bar {
+    background-color: var(--dark-blue);
+}
+
+.product-image {
+    height: 300px;
+    /* width: 300px; */
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    box-shadow: var(--dark-shadow);
+    object-fit: cover;
+    float: right;
+}
+
+#product-template .paragraph {
+    margin: 10px 0;
+}
+
+#product-template .btn {
+    float: none;
+}
+
+/* Contact Modal */
+
+.modal {
+    margin: 40px 10% 60px;
+    width: 80vw;
+    height: calc(100vh - 100px);
+    z-index: 3;
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow: var(--dark-shadow);
+}
+
+.modal::-webkit-scrollbar {
+    background-color: var(--blueGrayDark);
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color: var(--transparent-white);
+    border-radius: 10px;
+    width: 20px;
+}
+
+.modal #contact-form {
+    padding: 20px 60px;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--dark-blue);
+}
+
+.modal .invisibutton {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+}
+
+.modal-phone {
+    background-color: var(--blueGray);
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modal-phone .title {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--dark-blue);
 }

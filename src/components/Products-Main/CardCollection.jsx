@@ -4,7 +4,7 @@ import { useFlex } from "../global/FlexContext";
 import CardTrack from "./CardTrack";
 
 export default function CardCollection(props) {
-        //Buttons
+    //Buttons
         
     const flex = useFlex();
 
@@ -13,7 +13,6 @@ export default function CardCollection(props) {
 
     function checkWidth() {
         const track = document.getElementById(props.name);
-        console.log("Called")
         if(track.scrollWidth > track.clientWidth) {
             setNextActive(true)
         } else {
@@ -37,42 +36,42 @@ export default function CardCollection(props) {
         }
     }
     
-        function nextCard() {
-            const track = document.getElementById(props.name);
-            track.scrollLeft += 270;
-        }
+    function nextCard() {
+        const track = document.getElementById(props.name);
+        track.scrollLeft += 270;
+    }
     
-        function prevCard() {
-            const track = document.getElementById(props.name);
-            track.scrollLeft -= 270;
-        }
+    function prevCard() {
+        const track = document.getElementById(props.name);
+        track.scrollLeft -= 270;
+    }
 
-        //Scroll 
+    //Scroll 
 
-        const [grab, setGrab] = useState(false);
-        const [start, setStart] = useState(0);
-        const [scroll, setScroll] = useState(0);
+    const [grab, setGrab] = useState(false);
+    const [start, setStart] = useState(0);
+    const [scroll, setScroll] = useState(0);
 
-        function handleMouseDown(e) {
-            const track = document.getElementById(props.name);
-            setGrab(true);
-            setStart(e.pageX - track.offsetLeft);
-            setScroll(track.scrollLeft);
-        }
+    function handleMouseDown(e) {
+        const track = document.getElementById(props.name);
+        setGrab(true);
+        setStart(e.pageX - track.offsetLeft);
+        setScroll(track.scrollLeft);
+    }
     
-        function handleMouseUp() {
-            setGrab(false);
-        }
+    function handleMouseUp() {
+        setGrab(false);
+    }
     
-        function handleMovement(e) {
-            const target = document.getElementById(props.name);
-            e.preventDefault();
-            if(grab) {
-                const x = e.pageX - target.offsetLeft;
-                const walk = (x - start) * 3;
-                target.scrollLeft = scroll - walk;
-            }
+    function handleMovement(e) {
+        const target = document.getElementById(props.name);
+        e.preventDefault();
+        if(grab) {
+            const x = e.pageX - target.offsetLeft;
+            const walk = (x - start) * 3;
+            target.scrollLeft = scroll - walk;
         }
+    }
 
 
     return (
