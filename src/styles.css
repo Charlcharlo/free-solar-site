@@ -61,6 +61,7 @@ html {
 
 a, button {
     cursor: pointer !important;
+    text-decoration: none;
 }
 
 /* Text */
@@ -83,7 +84,7 @@ a, button {
 }
 
 .para-link {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--blueBlack);
     display: flex;
@@ -510,7 +511,7 @@ ul {
     align-items: flex-start;
 }
 
-.feature-array .vector-icon {
+.feature-block .vector-icon {
     width: 2rem;
     height: 2rem;
 }
@@ -519,8 +520,8 @@ ul {
     fill: white;
 }
 
-.feature-array .title {
-    font-size: 1.5rem;
+.feature-block .title {
+    font-size: 1.5rem !important;
     margin: 10px 0;
 }
 
@@ -816,6 +817,7 @@ textarea.contact-input {
 
 .product-collection > .title {
     margin-left: 20px;
+    z-index: 4;
 }
 
 .product-track {
@@ -884,6 +886,7 @@ textarea.contact-input {
 
 .product-card:hover > div:last-child {
     height: 130px;
+    padding-right: 20px;
 }
 
 .product-card .title {
@@ -936,12 +939,15 @@ textarea.contact-input {
 
 /* Product Template */
 
+#product-template {
+    padding-bottom: 80px;
+}
+
 #product-template #nav-bar {
     background-color: var(--dark-blue);
 }
 
 .product-image {
-    /* height: 300px; */
     width: 300px;
     margin: 0 0 20px 20px;
     border-radius: 10px;
@@ -950,12 +956,37 @@ textarea.contact-input {
     float: right;
 }
 
+#product-template .price {
+    text-align: left;
+    font-size: 2rem;
+}
+
 #product-template .paragraph {
     margin: 10px 0;
 }
 
 #product-template .btn {
     float: none;
+    margin-bottom: 20px;
+}
+
+#product-template .feature-block {
+    width: calc(100% - 320px);
+}
+
+#product-template .feature-block ul {
+    white-space: pre-line;
+    list-style: outside;
+}
+
+#product-template .feature-block .vector-icon {
+    margin-top: 0;
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
+#product-template .feature-block .title {
+    margin-top: 0;
 }
 
 /* Contact Modal */
@@ -995,6 +1026,12 @@ textarea.contact-input {
     right: 60px;
 }
 
+.modal .email-progress .invisibutton {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
 .modal-phone {
     background-color: var(--blueGray);
     padding: 20px 60px;
@@ -1010,6 +1047,10 @@ textarea.contact-input {
 }
 
 @media (max-width: 800px) {
+    #product-template .price {
+        font-size: 1.5rem;
+    }
+
     .modal {
         margin: 20px;
         width: calc(100% - 40px);
@@ -1037,5 +1078,9 @@ textarea.contact-input {
         width: 100%;
         margin: 0;
         margin-bottom: 10px;
+    }
+
+    #product-template .feature-block {
+        width: 100%;
     }
 }

@@ -48,10 +48,15 @@ export default function FeatureIcons({icon}) {
                     />
                 </svg>
             )
+        
+        case "terms":
+            return (
+                <svg className="vector-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8 12h8v2H8v-2m2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4v-2m-2-2h4.1l.9-.9V16H8v2m12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1l-2.1-2.1l1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1l2.1 2.1Z"/></svg>
+            )
     
         default:
             return (
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M3 4.9v.05l.05-.01L4.11 6H3v12h13.11l4.73 4.73l1.27-1.27L4.57 3.91L2.39 1.73L1.11 3L3 4.9m3.41 4.51c.2-.19.35-.41.45-.66l2.3 2.3c-.11.3-.16.62-.16.95c0 .8.32 1.56.88 2.12S11.2 15 12 15c.33 0 .65-.05.95-.16L14.11 16H7c0-.53-.21-1.04-.59-1.41C6.04 14.21 5.53 14 5 14v-4c.53 0 1.04-.21 1.41-.59m11.28 5.09L21 17.8V6H9.2l2 2H17c0 .53.21 1.04.59 1.41c.37.38.88.59 1.41.59v4c-.5 0-.95.18-1.31.5Z"/></svg>
+                <svg className="vector-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 9h2V7h-2v2m3 8v-2h-1v-4h-3v2h1v2h-1v2h4M5 3h14a2 2 0 0 1 2 2v14c0 .53-.21 1.04-.59 1.41c-.37.38-.88.59-1.41.59H5c-.53 0-1.04-.21-1.41-.59C3.21 20.04 3 19.53 3 19V5c0-1.11.89-2 2-2m14 16V5H5v14h14Z"/></svg>
             )
     }
 }

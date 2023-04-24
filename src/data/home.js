@@ -153,11 +153,8 @@ export const contactInfo = {
     ],
     email: [
         {
-            address: "support@freesolarza.co.za"
-        },
-        {
-            address: "sales@freesolarza.co.za"
-        },
+            address: "freesolarza@gmail.com"
+        }
     ],
     location: {
         text: ["476 Felstead Rd", "North Riding", "Roodepoort", "Gauteng", "2169"],

@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-
 import Cancel from "../home/icons/Cancel";
 import Send from "../home/icons/Send";
 import EmailProgress from "../home/EmailProgress";
@@ -18,7 +17,7 @@ export default function ProductContact(props) {
 
         emailjs.sendForm(
             'service_m2p3mij', 
-            'template_fzh834j', 
+            'template_y3l0zcm', 
             form.current,
             'luFVC0zC_utdvFlpA'
         )
