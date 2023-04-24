@@ -75,7 +75,7 @@ a, button {
 .paragraph {
     text-align: justify;
     white-space: pre-wrap;
-    
+    color: var(--blueBlack);
 }
 
 .text-block .title, 
@@ -149,6 +149,13 @@ a, button {
     width: 100vw;
     box-sizing: border-box;
     padding: 20px 7%;
+    z-index: 2;
+}
+
+.body-block-special {
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 20px calc(7% - 10px);
     z-index: 2;
 }
 
@@ -943,7 +950,8 @@ textarea.contact-input {
     padding-bottom: 80px;
 }
 
-#product-template #nav-bar {
+#product-template #nav-bar, 
+#article-template #nav-bar {
     background-color: var(--dark-blue);
 }
 
@@ -1083,4 +1091,62 @@ textarea.contact-input {
     #product-template .feature-block {
         width: 100%;
     }
+}
+
+/* Articles ****************************************/
+
+.article-preview {
+    margin: 10px;
+    margin-bottom: 20px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: var(--dark-shadow);
+}
+
+.article-preview img {
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-preview div {
+    border-radius: 0 10px 10px 0;
+    margin-left: 150px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), white 100px);
+    height: 100%;
+    padding: 20px;
+    padding-left: 120px;
+}
+
+.article-preview:hover {
+    margin: 10px 5px;
+    height: 210px;
+}
+
+.article-preview:hover div {
+    padding-left: 130px;
+}
+
+#article-template .body-block-special {
+    padding: 20px calc(7% - 20px);
+}
+
+.article-page {
+    box-shadow: var(--dark-shadow);
+    background-color: white;
+}
+
+.article-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.article-body {
+    padding: 20px;
 }

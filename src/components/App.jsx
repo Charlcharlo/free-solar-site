@@ -7,11 +7,27 @@ import Home from "./Home";
 import Products from "./Products"
 import { standalone, extras, conversions, onGrid } from '../data/products';
 import ProductTemplate from './Product-Individual/ProductTemplate';
+import Articles from './Articles';
+import { articles, articlesChapters } from '../data/articles';
+import Template from './articles/Template';
+import TemplateChapters from './articles/TemplateChapters';
 
 export default function App() {
-    function renderRoute(page, i) {
+    function renderRouteProducts(page, i) {
         return (
             <Route key={i} exact path={page.url} element={<ProductTemplate info={page} />} />
+        )
+    }
+
+    function renderRouteArticle(page, i) {
+        return (
+            <Route key={i} exact path={page.url} element={<Template info={page} />} />
+        )
+    }
+
+    function renderRouteArticleChapter(page, i) {
+        return (
+            <Route key={i} exact path={page.url} element={<TemplateChapters info={page} />} />
         )
     }
 
@@ -20,10 +36,13 @@ export default function App() {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/products" element={<Products />} />
-                {standalone.map(renderRoute)}
-                {onGrid.map(renderRoute)}
-                {conversions.map(renderRoute)}
-                {extras.map(renderRoute)}
+                {standalone.map(renderRouteProducts)}
+                {onGrid.map(renderRouteProducts)}
+                {conversions.map(renderRouteProducts)}
+                {extras.map(renderRouteProducts)}
+                <Route exact path="/knowledge-base" element={<Articles />} />
+                {articles.map(renderRouteArticle)}
+                {articlesChapters.map(renderRouteArticleChapter)}
             </Routes>
         </Router>
     )
