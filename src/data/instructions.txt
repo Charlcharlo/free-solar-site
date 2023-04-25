@@ -1,0 +1,25 @@
+Articles:
+
+1. Place the article's image into the articles folder inside the images 
+folder (NOT THE IMAGES FOLDER IN BUILD)
+2. copy the following template and paste into articles.js:
+
+{
+    title: "", //Title of the Article
+    image: '', //Full filename of image in public/images/articles (eg: image.png)
+    sections: [
+        //Copy and paste the following four lines for each subheading of the article
+        {
+            title: "",
+            body: ``
+        },
+    ]
+},
+
+3. In the command line cd to your folder
+4. To preview the article, type npm start
+5. To compile a build folder for deployment, hit npm run build
+6. Copy the contents of the build folder to the server. 
+7. Make sure you don't delete .htaccess as this is necessary for the routing of the page
+
+If you have any question, just let me know :)

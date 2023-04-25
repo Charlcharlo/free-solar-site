@@ -11,6 +11,7 @@ import Articles from './Articles';
 import { articles, articlesChapters } from '../data/articles';
 import Template from './articles/Template';
 import TemplateChapters from './articles/TemplateChapters';
+import { kebabCase } from 'lodash';
 
 export default function App() {
     function renderRouteProducts(page, i) {
@@ -20,14 +21,16 @@ export default function App() {
     }
 
     function renderRouteArticle(page, i) {
+        const url = kebabCase(page.title);
         return (
-            <Route key={i} exact path={page.url} element={<Template info={page} />} />
+            <Route key={i} exact path={`/knowledge-base/${url}`} element={<Template info={page} />} />
         )
     }
 
     function renderRouteArticleChapter(page, i) {
+        const url = kebabCase(page.title);
         return (
-            <Route key={i} exact path={page.url} element={<TemplateChapters info={page} />} />
+            <Route key={i} exact path={`/knowledge-base/${url}`} element={<TemplateChapters info={page} />} />
         )
     }
 

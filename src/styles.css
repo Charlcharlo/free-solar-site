@@ -74,8 +74,9 @@ a, button {
 
 .paragraph {
     text-align: justify;
-    white-space: pre-wrap;
+    white-space: pre-line;
     color: var(--blueBlack);
+    line-height: 1.2rem;
 }
 
 .text-block .title, 
@@ -1098,7 +1099,7 @@ textarea.contact-input {
 .article-preview {
     margin: 10px;
     margin-bottom: 20px;
-    height: 200px;
+    min-height: 200px;
     border-radius: 10px;
     box-shadow: var(--dark-shadow);
 }
@@ -1124,11 +1125,10 @@ textarea.contact-input {
 
 .article-preview:hover {
     margin: 10px 5px;
-    height: 210px;
 }
 
 .article-preview:hover div {
-    padding-left: 130px;
+    padding: 25px 20px 25px 130px;
 }
 
 #article-template .body-block-special {
@@ -1138,6 +1138,7 @@ textarea.contact-input {
 .article-page {
     box-shadow: var(--dark-shadow);
     background-color: white;
+    margin-bottom: 80px;
 }
 
 .article-image {
@@ -1149,4 +1150,85 @@ textarea.contact-input {
 
 .article-body {
     padding: 20px;
+}
+
+.sub-section {
+    margin-top: 1.2rem;
+}
+
+.article-contents {
+    padding: 10px;
+    border: 1px solid var(--blueBlack);
+    overflow: auto;
+    z-index: 5;
+}
+
+.article-contents a {
+    display: block;
+    color: var(--blueGray);
+    font-family: var(--sub-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.article-contents a:hover {
+    color: var(--whiteYellow);
+}
+
+.article-contents .title {
+    color: var(--blueGray);
+    font-size: 1.5rem;
+}
+
+.article-header {
+    width: 100%;
+}
+
+.article-header > div {
+    min-height: 400px;
+    padding: 20px;
+    padding-right: 120px;
+    background: linear-gradient(to left, transparent, var(--blueBlack) 100px);
+    width: 700px;
+    z-index: 4;
+}
+
+.article-header .title {
+    color: white;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 600px);
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .article-preview {
+        min-height: 350px;
+    }
+
+    .article-preview {
+        width: 100%;
+        height: 100%;
+    }
+
+    .article-preview img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 250px;
+    }
+    
+    .article-preview div {
+        border-radius: 0 0 10px 10px;
+        margin-left: 0;
+        margin-top: 150px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), white 100px);
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
 }
