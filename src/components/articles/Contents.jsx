@@ -9,7 +9,7 @@ export default function Contents({info, i}) {
     
     return (
         <div className="article-contents">
-            <h1 className="title">Subheadings</h1>
+            {/* <h1 className="title">Subheadings</h1> */}
             {info.map(renderLinks)}
         </div>
     )

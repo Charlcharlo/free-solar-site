@@ -1,24 +1,29 @@
-import { articles, articlesChapters } from "../data/articles";
+import { articlesChapters } from "../data/articles";
 import Header from "./articles/Header";
-import Preview from "./articles/Preview";
 import PreviewChapters from "./articles/PreviewChapters";
+import BackToTop from "./global/BackToTop";
+import FlexProvider from "./global/FlexContext";
 
 export default function Articles() {
     function renderPreview(info, i) {
-        return (
-            <Preview key={i} info={info} />
-        )
+        if (info.published) {
+            return (
+                <PreviewChapters key={i} info={info} />
+            )
+        } else return null;
     }
     return (
-        <div>
+    <FlexProvider>
+        <div id="articles-preview">
+            <BackToTop start={400} />
             <Header 
                 title="Technical Articles"
                 image="panel-hat.jpg"
             />
             <div className="body-block-special">
-                {articles.map(renderPreview)}
-                <PreviewChapters info={articlesChapters[0]} />
+                {articlesChapters.map(renderPreview)}
             </div>
         </div>
+    </FlexProvider>
     )
 }

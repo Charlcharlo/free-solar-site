@@ -1,21 +1,7 @@
-export const articles = [
-    {
-        title: "Article for Testing",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex felis, finibus non vulputate at, hendrerit quis lectus. In quis sapien massa. Nullam lobortis nibh tortor. Donec tempus placerat vestibulum. Aenean faucibus nibh quis augue congue, at porta erat malesuada. Duis non ex eget justo imperdiet condimentum. Fusce vestibulum diam elementum, rutrum ante auctor, hendrerit lorem. Cras efficitur blandit sagittis. Aliquam rhoncus sollicitudin enim, a lacinia arcu lacinia id. Nam fermentum neque eu facilisis lacinia. Vestibulum scelerisque accumsan venenatis. Phasellus facilisis vulputate lorem sit amet porta. Phasellus pulvinar lacus at nisi pulvinar semper. Proin ac auctor risus. Integer massa arcu, commodo in blandit in, tristique vitae augue.",
-        image: 'nhh.jpg',
-        url: "technical-advice/testing"
-    },
-    {
-        title: "Article for Testing",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex felis, finibus non vulputate at, hendrerit quis lectus. In quis sapien massa. Nullam lobortis nibh tortor. Donec tempus placerat vestibulum. Aenean faucibus nibh quis augue congue, at porta erat malesuada. Duis non ex eget justo imperdiet condimentum. Fusce vestibulum diam elementum, rutrum ante auctor, hendrerit lorem. Cras efficitur blandit sagittis. Aliquam rhoncus sollicitudin enim, a lacinia arcu lacinia id. Nam fermentum neque eu facilisis lacinia. Vestibulum scelerisque accumsan venenatis. Phasellus facilisis vulputate lorem sit amet porta. Phasellus pulvinar lacus at nisi pulvinar semper. Proin ac auctor risus. Integer massa arcu, commodo in blandit in, tristique vitae augue.",
-        image: 'nhh.jpg',
-        url: "technical-advice/testing"
-    },
-]
-
 export const articlesChapters = [
     // Paste Below This Line /////////////////////////////////////////////
     {
+        published: true,
         title: "Batteries and Storage",
         image: 'large-ups.png',
         sections: [
@@ -32,8 +18,741 @@ export const articlesChapters = [
             {
                 title: "What Are the Different Types Of Batteries?",
                 body: "Batteries for energy storage are typically made of lead-acid or lithium-ion. When selecting the best battery for your solar system, it’s important to understand the difference between what is a deep cycle battery vs. flooded lead-acid, sealed lead-acid, and lithium batteries before making your selection. Here are some of the differences between lead-acid vs. lithium-ion batteries."
+            },
+            {
+                title: "How do I compare batteries?",
+                body: `As you consider your solar battery options, you’ll want to compare each type of battery based on the capacity, depth of discharge (DoD), round trip efficiency, and battery life to find the best batteries for solar depending on your system’s requirements. Make sure to check the following:
+
+                Capacity: Capacity is the total amount of electricity that a solar battery can store. This power is measured in kilowatt-hours (kWh). 
+                
+                Depth of discharge (DoD): The depth of discharge (DoD) indicates the amount of battery capacity that’s used. The higher the DoD, the more usage you’ll get from the battery’s capacity. Your depth of discharge should generally be at least 40% or higher.
+                
+                Round-trip efficiency: Round-trip efficiency is the difference between the amount of energy used to charge it and the available amount of energy. A higher round-trip efficiency is generally more economical. You should look for a round-trip efficiency around 80%. 
+                
+                Battery life & warranty: Since battery performance declines over time, a warranty guarantees good performance for years or cycles as well as ensuring the battery maintains a certain capacity. `
             }
         ]
     },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    {
+        published: false,
+        title: "", //Title of the Article
+        image: '', //Full filename of image in public/images/articles (eg: image.png)
+        sections: [
+            //Copy and paste the following four lines for each subheading of the article
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+            {
+                title: "",
+                body: ``
+            },
+        ]
+    },
+    
     // Edit above this line ///////////////////////////////////////////
 ]

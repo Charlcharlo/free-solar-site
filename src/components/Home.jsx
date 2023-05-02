@@ -12,7 +12,7 @@ import FlexProvider from './global/FlexContext';
 function Home() {
   return (
     <FlexProvider>
-      <BackToTop />
+      <BackToTop start={800} />
       <Header />
       <div className="full-page">
         <div id="about">

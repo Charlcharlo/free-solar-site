@@ -1,4 +1,6 @@
 import { kebabCase } from "lodash";
+import BackToTop from "../global/BackToTop";
+import FlexProvider from "../global/FlexContext";
 import NavBar from "../global/Navbar";
 import Contents from "./Contents";
 
@@ -14,7 +16,9 @@ export default function TemplateChapters({info}) {
     }
 
     return (
+    <FlexProvider>
         <div id="article-template">
+            <BackToTop start={400} />
             <NavBar />
             <div className="body-block-special">
                 <div className="article-page">
@@ -35,5 +39,6 @@ export default function TemplateChapters({info}) {
                 </div>
             </div>
         </div>
+    </FlexProvider>
     )
 }
