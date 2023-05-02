@@ -776,9 +776,10 @@ textarea.contact-input {
 }
 
 @media (max-width: 500px) {
-    .paragraph {
+    /* .paragraph {
         text-align: left;
-    }
+    } */
+    
     .header h1.title {
         font-size: 3rem;
     }
@@ -1222,6 +1223,26 @@ textarea.contact-input {
     object-fit: cover;
 }
 
+.para-image-block {
+    width: 100%;
+    text-align: center;
+}
+
+.para-image {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto 5px;
+}
+
+.image-tag {
+    color: var(--blueGrayDark);
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: var(--sub-font);
+}
+
 @media (max-width: 800px) {
     .article-header {
         overflow: auto;
@@ -1274,7 +1295,7 @@ textarea.contact-input {
 @media (max-width: 500px) {
     #articles-preview .body-block-special,
     #article-template .body-block-special {
-        padding: 20px 0;
+        padding: 0 0 20px;
     }
 
     #article-template .body-block,
@@ -1296,5 +1317,9 @@ textarea.contact-input {
 
     .article-preview img {
         border-radius: 0;
+    }
+
+    .image-tag {
+        font-size: 1rem;
     }
 }
