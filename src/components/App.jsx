@@ -5,17 +5,17 @@ import { standalone, extras, conversions, onGrid } from "../data/products";
 import ProductTemplate from "./Product-Individual/ProductTemplate";
 import Articles from "./Articles";
 import { articlesChapters } from "../data/articles";
-// import Template from './articles/Template';
 import TemplateChapters from "./articles/TemplateChapters";
 import { kebabCase } from "lodash";
 
 export default function App() {
   function renderRouteProducts(page, i) {
+    const url = kebabCase(page.name);
     return (
       <Route
         key={i}
         exact
-        path={page.url}
+        path={`/products/${url}`}
         element={<ProductTemplate info={page} />}
       />
     );

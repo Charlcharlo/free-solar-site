@@ -1132,13 +1132,11 @@ textarea.contact-input {
     font-size: 2rem;
 }
 
-/* .article-preview:hover {
-    margin: 10px 5px;
-} */
-
 .article-preview:hover div {
     background: linear-gradient(to right, rgba(0, 0, 0, 0), white 100px);
 }
+
+/* Article template */
 
 #article-template .body-block-special {
     padding: 20px calc(7% - 20px);

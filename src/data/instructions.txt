@@ -16,6 +16,13 @@ folder (NOT THE IMAGES FOLDER IN BUILD)
     ]
 },
 
+If you would like to add an image to a paragraph, paste the following 
+within the curly bracers:
+
+    hasImage: true, 
+    image: "", //the filename
+    imageTag: "", //Optional description of the image
+
 3. In the command line cd to your folder
 4. To preview the article, type npm start
 5. To compile a build folder for deployment, hit npm run build

@@ -1,6 +1,10 @@
+import { kebabCase } from "lodash";
+
 export default function Card(props) {
+  const url = kebabCase(props.name);
+
   return (
-    <a href={props.url}>
+    <a href={`/products/${url}`}>
       <div className="product-card" id={props.id}>
         <div>
           <img
