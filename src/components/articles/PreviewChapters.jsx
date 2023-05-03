@@ -15,10 +15,10 @@ export default function PreviewChapters({ info }) {
         <div>
           <h1 className="title">{info.title}</h1>
           <p className="paragraph">{`${preview}...`}</p>
-          <a className="para-link" href={info.url}>
+          <p className="para-link">
             Read More
             <ArrowRightAlt fontSize="large" />
-          </a>
+          </p>
         </div>
       </a>
     </div>

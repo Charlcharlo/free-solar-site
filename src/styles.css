@@ -240,7 +240,7 @@ a, button {
     background-color: var(--transparent-blue);
     width: 100vw;
     align-items: center;
-    z-index: 3;
+    z-index: 11;
 }
 
 #nav-bar .title {
@@ -263,7 +263,7 @@ a, button {
 }
 
 .flexed-nav {
-    background-color: var(--dark-blue);
+    background-color: var(--transparent-blue);
     position: absolute;
     left: 0;
     top: 100%;
@@ -865,6 +865,7 @@ textarea.contact-input {
 
 .product-card {
     background-color: white;
+    border-radius: 10px;
     width: 250px;
     height: 300px;
     box-shadow: var(--dark-shadow);
@@ -881,6 +882,7 @@ textarea.contact-input {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 .product-card > div:last-child {
@@ -954,8 +956,10 @@ textarea.contact-input {
     padding-bottom: 80px;
 }
 
-#product-template #nav-bar, 
-#article-template #nav-bar {
+#product-template #nav-bar,
+#product-template .flexed-nav, 
+#article-template #nav-bar,
+#article-template .flexed-nav {
     background-color: var(--dark-blue);
 }
 

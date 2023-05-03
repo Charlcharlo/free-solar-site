@@ -3,6 +3,7 @@ import { useState } from "react";
 import FlexProvider from "../global/FlexContext";
 import NavBar from "../global/Navbar";
 import Feature from "../home/Feature";
+import ArticleHtml from "./ArticleHtml";
 import ContactModal from "./ContactModal";
 import Terms from "./Terms";
 
@@ -25,7 +26,12 @@ export default function ProductTemplate({ info }) {
           />
           <h1 className="title">{info.name}</h1>
           <h2 className="price">{info.price}</h2>
-          <p className="paragraph">{info.data.writeUp}</p>
+          {info.data.html ? (
+            <ArticleHtml text={info.data.writeUp} />
+          ) : (
+            <p className="paragraph">{info.data.writeUp}</p>
+          )}
+
           <Feature title="Features" features={info.data.features} />
           <button className="btn btn-ylw" onClick={toggleModal}>
             Enquire About This Product

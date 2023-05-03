@@ -130,6 +130,40 @@ export const conversions = [
 
 export const extras = [
     {
+        name: "12V Power Extension",
+        price: "POA",
+        imgUrl: "12volt.png",
+        data: {
+            writeUp: `
+                <p classname="paragraph">Living life in the 12v lane! 100 years ago there was nothing but candles and fire to power our lives. Fast forward to today and low-cost, freely available, cheap power is the key to operating a low energy home in our power constricted land.</p>
+                <br>
+                <p classname="paragraph">The most necessary devices that we have come to depend on in our life work on 5 volts or 12 volts. The availability of that energy coupled with power saving and the ability to recharge all of those devices is the goal of our medium and small level solutions at Freesolarza.</p>
+                <br>
+                <h2 classname="title">What can you power using this 12v power extension?</h2>
+                <ul>
+                    <li>Wi-fi Routers</li>
+                    <li>Fiber box or ONT</li>
+                    <li>Portable lights (12v)</li>
+                    <li>Phone chargers</li>
+                    <li>iPods, iPads, tablets</li>
+                    <li>Cameras</li>
+                    <li>Power banks</li>
+                    <li>Anything else with a 12V power supply</li>
+                </ul>
+                <br>
+                <h2 classname="title">Conclusion:</h2>
+                <p>Powering and recharging all of the above can be achieved using any 12v battery even the smallest 12v battery is able to run all those appliances for hours making it more efficient cheaper and easier. Even a 5-volt power bank with a <a href="https://freesolarza.co.za/products/step-up-charging-cable">Step-Up Voltage Cable</a> can achieve the same effect.</p>
+                <br>
+                `,
+            html: true,
+            features: [
+                "Easy installation",
+                "Compatible with most devices",
+                "Compatible with solar solution, standalone UPS or power bank with a Step Up Cable"
+            ]
+        }
+    },
+    {
         name: "Step up Charging Cable",
         price: "POA",
         imgUrl: 'cable.png',
