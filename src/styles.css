@@ -964,7 +964,7 @@ textarea.contact-input {
 }
 
 .product-image {
-    width: 300px;
+    width: 400px;
     margin: 0 0 20px 20px;
     border-radius: 10px;
     box-shadow: var(--dark-shadow);
@@ -1003,6 +1003,20 @@ textarea.contact-input {
 
 #product-template .feature-block .title {
     margin-top: 0;
+}
+
+.center-div {
+    width: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+
+.article-html img {
+    max-width: 500px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: var(--dark-shadow);
 }
 
 /* Contact Modal */

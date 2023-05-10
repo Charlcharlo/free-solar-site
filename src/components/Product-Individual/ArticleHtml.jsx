@@ -1,3 +1,5 @@
 export default function ArticleHtml({ text }) {
-  return <div dangerouslySetInnerHTML={{ __html: text }} />;
+  return (
+    <div className="article-html" dangerouslySetInnerHTML={{ __html: text }} />
+  );
 }

@@ -80,7 +80,7 @@ export const onGrid = [
     {
         name: "Large UPS System",
         price: "POA",
-        imgUrl: 'large-ups.png',
+        imgUrl: 'large-ups.jpeg',
         data: {
             writeUp: "Our 2kw UPS system allows you to keep your essential appliances and devices powered up during loadshedding and power outages. This solution is ideal for those who are not yet ready to make the full leap to solar but would still like to be switched on when the rest of the country is switched off. If you do decide to upgrade to a hybrid solar solution in the future, this battery can be used to store power from your panels, thus saving you costs on the installation.",
             features:[
@@ -135,11 +135,11 @@ export const extras = [
         imgUrl: "12volt.png",
         data: {
             writeUp: `
-                <p classname="paragraph">Living life in the 12v lane! 100 years ago there was nothing but candles and fire to power our lives. Fast forward to today and low-cost, freely available, cheap power is the key to operating a low energy home in our power constricted land.</p>
+                <p class="paragraph">Living life in the 12v lane! 100 years ago there was nothing but candles and fire to power our lives. Fast forward to today and low-cost, freely available, cheap power is the key to operating a low energy home in our power constricted land.</p>
                 <br>
-                <p classname="paragraph">The most necessary devices that we have come to depend on in our life work on 5 volts or 12 volts. The availability of that energy coupled with power saving and the ability to recharge all of those devices is the goal of our medium and small level solutions at Freesolarza.</p>
+                <p class="paragraph">The most necessary devices that we have come to depend on in our life work on 5 volts or 12 volts. The availability of that energy coupled with power saving and the ability to recharge all of those devices is the goal of our medium and small level solutions at Freesolarza.</p>
                 <br>
-                <h2 classname="title">What can you power using this 12v power extension?</h2>
+                <h2>What can you power using this 12v power extension?</h2>
                 <ul>
                     <li>Wi-fi Routers</li>
                     <li>Fiber box or ONT</li>
@@ -151,14 +151,18 @@ export const extras = [
                     <li>Anything else with a 12V power supply</li>
                 </ul>
                 <br>
-                <h2 classname="title">Conclusion:</h2>
+                <h2>Conclusion:</h2>
                 <p>Powering and recharging all of the above can be achieved using any 12v battery even the smallest 12v battery is able to run all those appliances for hours making it more efficient cheaper and easier. Even a 5-volt power bank with a <a href="https://freesolarza.co.za/products/step-up-charging-cable">Step-Up Voltage Cable</a> can achieve the same effect.</p>
                 <br>
+                <div class="center-div">
+                    <img src="http://localhost:3000/images/products/12v-box.jpeg" />
+                </div>
                 `,
             html: true,
             features: [
                 "Easy installation",
                 "Compatible with most devices",
+                "Pin adaptors included",
                 "Compatible with solar solution, standalone UPS or power bank with a Step Up Cable"
             ]
         }
