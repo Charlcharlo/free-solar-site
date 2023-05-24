@@ -26,7 +26,7 @@ export default function ContactList() {
 
   return (
     <div id="contact-list">
-      <h1 className="title">Get in touch</h1>
+      <h1 className="title">Get in touch if you would like to switch lanes</h1>
       <div className="row-start link">
         <Phone />
         <div>{contactInfo.phone.map(renderPhone)}</div>

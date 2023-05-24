@@ -6,7 +6,10 @@ export const placeholder = {
 
 export const aboutUs = {
     title: "On a mission to provide renewable energy for all",
-    body: "FreeSolarZA was founded in 2021 with the goal of getting our country tapped into the sun and as off the grid as possible. After researching the best way to provide renewable energy to his home, our founder, Ivan Minev, soon saw he could use his findings and expertise to help many more people do the same. To date, FreeSolarZA has helped homes and businesses alike move towards a more sustainable future by overseeing the construction and maintenance of solar wifi hotspots, off-the-grid security cameras, as well as full-scale solar conversions so that you never have to worry about grid instability again.",
+    body: `FreeSolar is an NPO on a mission to get out of the Eskom lane and into the 12 volt lane. Having found the cheapest most efficient way to store and consume the sun's energy we invite the whole country to benefit the free energy from the sun.
+
+    Tapping into that free energy, we would be able to build a better, far more sustainable world for all of us. Overcoming the hard challenges of high costs associated with installing and maintaining solar energy system that are preventing many people from benefitting from this technology here at FreeSolar we are on a mission to change all that dogma and have made Solar Energy affordable for all to have the basics power needs at home to get us through those difficult and challenging times.
+    `,
     image: "./images/solar-installation.jpg",
     url: "/#contact",
     linkText: "Get in touch",
@@ -14,7 +17,7 @@ export const aboutUs = {
 }
 
 export const whySolar = {
-    title: "Why choose solar power?",
+    title: "Why choose the 12v Lane?",
     reasons: [
         {
             text: "Return on Investment",
@@ -145,10 +148,10 @@ export const contactLinks = [
 export const contactInfo = {
     phone: [
         {
-            number: "+27748391142"
+            number: "0748391142"
         },
         {
-            number: "+27639646463"
+            number: "0836480810"
         }
     ],
     email: [

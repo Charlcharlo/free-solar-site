@@ -2,7 +2,7 @@ import { kebabCase } from "lodash";
 import BackToTop from "../global/BackToTop";
 import FlexProvider from "../global/FlexContext";
 import NavBar from "../global/Navbar";
-import Contents from "./Contents";
+import ArticleHtml from "../Product-Individual/ArticleHtml";
 
 export default function TemplateChapters({ info }) {
   function renderSections(section, i) {
@@ -35,16 +35,15 @@ export default function TemplateChapters({ info }) {
             <div className="article-header">
               <img
                 className="header-image"
-                src={`${window.location.origin}/images/articles/${info.image}`}
-                alt={info.image}
+                src={`https://freesolarza.co.za/images/articles/${info.img.url}`}
+                alt={info.img.title}
               />
               <div>
-                <h1 className="title">{info.title}</h1>
-                <Contents info={info.sections} />
+                <h1 className="title">{info.name}</h1>
               </div>
             </div>
             <div className="article-body">
-              {info.sections.map(renderSections)}
+              <ArticleHtml text={info.body} />
             </div>
           </div>
         </div>

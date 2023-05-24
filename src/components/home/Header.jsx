@@ -7,7 +7,7 @@ export default function Header() {
     <div className="header col-between">
       <NavBar />
       <div className="body-block" id="header-banner">
-        <Title text="Tap into clean and renewable energy from the sun" />
+        <Title text="Get out of the Eskom lane and into the 12v Lane" />
       </div>
       <CardCollection />
       <div className="fade-gray" />

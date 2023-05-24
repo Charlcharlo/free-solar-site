@@ -12,15 +12,18 @@ export default function CardTrack({
   });
 
   function renderCards(card, i) {
-    return (
-      <Card
-        key={i}
-        imgUrl={card.imgUrl}
-        name={card.name}
-        url={card.url}
-        price={card.price}
-      />
-    );
+    if (card.published) {
+      return (
+        <Card
+          key={i}
+          imgUrl={card.img.url}
+          name={card.name}
+          url={`products/${card.category}/${card.id}`}
+          price={card.price}
+          title={card.title}
+        />
+      );
+    } else return null;
   }
 
   return (

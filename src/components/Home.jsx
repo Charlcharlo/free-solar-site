@@ -7,9 +7,28 @@ import WhySolar from "./home/WhySolar";
 import Contact from "./home/Contact";
 import BackToTop from "./global/BackToTop";
 import FlexProvider from "./global/FlexContext";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
 // import BannerImage from './utils/BannerImage';
 
 function Home() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === "") {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id
+    else {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [hash]);
   return (
     <FlexProvider>
       <BackToTop start={800} />

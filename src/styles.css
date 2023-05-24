@@ -69,12 +69,14 @@ a, button {
 /* Text */
 
 .title {
-    font-family: raleway;
+    font-family: var(--header-font);
     font-size: 3rem;
     color: var(--blueBlack);
 }
 
-.paragraph {
+.paragraph,
+.article-html p,
+.article-html li {
     text-align: justify;
     white-space: pre-line;
     color: var(--blueBlack);
@@ -99,7 +101,6 @@ a, button {
 .row-between {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     flex-wrap: wrap;
 }
 
@@ -987,7 +988,7 @@ textarea.contact-input {
 }
 
 #product-template .feature-block {
-    width: calc(100% - 320px);
+    width: calc(100% - 420px);
 }
 
 #product-template .feature-block ul {
@@ -1012,11 +1013,38 @@ textarea.contact-input {
     justify-content: center;
 }
 
+/* html rendering */
+
+.article-html p,
+.article-html h2,
+.article-html ul {
+    margin-bottom: 10px;
+}
+
+.article-html h2 {
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    color: var(--blueBlack);
+}
+
 .article-html img {
     max-width: 500px;
     margin: 10px auto;
     border-radius: 10px;
     box-shadow: var(--dark-shadow);
+    object-fit: cover;
+}
+
+.article-html figure {
+    text-align: center;
+}
+
+.article-html figcaption {
+    color: var(--blueGrayDark);
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: var(--sub-font);
 }
 
 /* Contact Modal */
@@ -1148,12 +1176,27 @@ textarea.contact-input {
 
 .article-preview .title {
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .article-preview:hover div {
     background: linear-gradient(to right, rgba(0, 0, 0, 0), white 100px);
 }
 
+.article-preview .paragraph {
+    white-space: normal;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.article-preview .para-link {
+    color: var(--bright-blue);
+}
+
+.article-preview:hover .title,
+.article-preview:hover .para-link {
+    color: var(--bright-blue-focus);
+}
 /* Article template */
 
 #article-template .body-block-special {
@@ -1221,7 +1264,7 @@ textarea.contact-input {
     padding: 20px;
     padding-right: 120px;
     background: linear-gradient(to left, transparent, var(--blueBlack) 100px);
-    width: 700px;
+    width: calc(100% - 600px);
     z-index: 4;
 }
 
@@ -1234,9 +1277,9 @@ textarea.contact-input {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 600px);
     height: 100%;
     object-fit: cover;
+    width: 700px;
 }
 
 .para-image-block {
