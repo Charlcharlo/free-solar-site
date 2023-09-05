@@ -9,7 +9,7 @@ export default function Header(props) {
         backgroundImage: `url(${window.location.origin}/images/articles/${props.image})`,
       }}
     >
-      <NavBar />
+      <NavBar contact={props.contact} />
       <div className="body-block">
         <h1 className="title">{props.title}</h1>
       </div>

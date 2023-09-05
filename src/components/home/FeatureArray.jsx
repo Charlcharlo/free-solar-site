@@ -2,14 +2,7 @@ import Feature from "./Feature";
 
 export default function FeatureArray({ list }) {
   function renderItems(item, i) {
-    return (
-      <Feature
-        key={i}
-        title={item.title}
-        icon={item.icon}
-        features={item.features}
-      />
-    );
+    return <Feature key={i} title={item.title} features={item.list} />;
   }
 
   return (

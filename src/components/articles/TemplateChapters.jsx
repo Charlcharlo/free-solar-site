@@ -1,35 +1,46 @@
-import { kebabCase } from "lodash";
+import { useEffect } from "react";
+import { useState } from "react";
+import { Helmet } from "react-helmet";
 import BackToTop from "../global/BackToTop";
 import FlexProvider from "../global/FlexContext";
+import Footer from "../global/Footer";
 import NavBar from "../global/Navbar";
 import ArticleHtml from "../Product-Individual/ArticleHtml";
 
 export default function TemplateChapters({ info }) {
-  function renderSections(section, i) {
-    const id = kebabCase(section.title);
-    return (
-      <div className="sub-section" key={i} id={id}>
-        <h2 className="sub-title">{section.title}</h2>
-        <p className="paragraph">{section.body}</p>
-        {section.hasImage && (
-          <div className="para-image-block">
-            <img
-              className="para-image"
-              src={`${window.location.origin}/images/articles/${section.image}`}
-              alt={section.image}
-            />
-            <p className="image-tag">{section.imageTag}</p>
-          </div>
-        )}
-      </div>
-    );
-  }
+  const [contact, setContact] = useState([]);
+  const [ready, setReady] = useState(false);
+  const [keywords, setKeywords] = useState("");
+  const tags = info.tags ? info.tags.toString() : "";
+
+  useEffect(() => {
+    fetch(`${window.location.origin}/data/home.json`, { cache: "no-cache" })
+      .then((response) => response.json())
+      .then((data) => {
+        const keyString = data.tags.toString();
+        setKeywords(keyString);
+        setContact(data.contactInfo);
+        setReady(true);
+      });
+  }, []);
 
   return (
     <FlexProvider>
+      {ready && (
+        <Helmet>
+          <title>{info.name}</title>
+          <meta
+            name="description"
+            content={
+              info.metaDescription ? info.metaDescription : info.plainText
+            }
+          />
+          <meta name="keywords" content={`${keywords},${tags}`} />
+        </Helmet>
+      )}
       <div id="article-template">
         <BackToTop start={400} />
-        <NavBar />
+        {ready && <NavBar contact={contact} />}
         <div className="body-block-special">
           <div className="article-page">
             <div className="article-header">
@@ -47,6 +58,7 @@ export default function TemplateChapters({ info }) {
             </div>
           </div>
         </div>
+        {ready && <Footer contact={contact} />}
       </div>
     </FlexProvider>
   );

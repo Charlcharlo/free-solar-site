@@ -1,3 +1,4 @@
+import { kebabCase } from "lodash";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import TemplateChapters from "./TemplateChapters";
@@ -5,17 +6,19 @@ import TemplateChapters from "./TemplateChapters";
 export default function ArticleSetter() {
   const [ready, setReady] = useState(false);
   const [page, setPage] = useState({});
-  const { id } = useParams();
+  const { name } = useParams();
 
   useEffect(() => {
-    fetch(`${window.location.origin}/data/articles.json`)
+    fetch(`${window.location.origin}/data/articles.json`, { cache: "no-cache" })
       .then((response) => response.json())
       .then((data) => {
-        const currentPage = data.articles.find((item) => item.id === id);
+        const currentPage = data.articles.find(
+          (item) => kebabCase(item.name) === name
+        );
         setPage(currentPage);
         setReady(true);
       });
-  }, [id]);
+  }, [name]);
 
   return ready && <TemplateChapters info={page} />;
 }

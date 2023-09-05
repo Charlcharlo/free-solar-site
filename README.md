@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# About this project
+
+This is a sample version of [FreeSolarZA.co.za](https://freesolarza.co.za/). Product and article data has been removed and the purpose of this repository is for recruiters to view and critique my code.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

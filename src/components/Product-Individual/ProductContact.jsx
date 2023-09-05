@@ -8,6 +8,7 @@ import { Close } from "@mui/icons-material";
 export default function ProductContact(props) {
   const [widgetIn, setWidgetIn] = useState(false);
   const [done, setDone] = useState(false);
+  const [productName, setProductName] = useState(props.product);
   const form = useRef();
 
   function sendEmail(e) {
@@ -38,11 +39,16 @@ export default function ProductContact(props) {
     setWidgetIn(false);
   }
 
+  function closeModal() {
+    const modal = document.getElementById("contact-modal");
+    modal.close();
+  }
+
   return (
     <div id="contact-form">
       {widgetIn && <EmailProgress done={done} close={closeWidget} />}
       <h1 className="title">{`Enquire about ${props.product}`}</h1>
-      <button className="invisibutton" onClick={() => props.toggleModal()}>
+      <button className="invisibutton" onClick={() => closeModal()}>
         <Close fontSize="large" />
       </button>
       <form className="col-start" ref={form} onSubmit={sendEmail}>
@@ -61,7 +67,10 @@ export default function ProductContact(props) {
           className="contact-input"
           type="text"
           name="about"
-          value={props.product}
+          value={productName}
+          onChange={(e) => {
+            setProductName(e.target.value);
+          }}
         />
         <label className="title" htmlFor="message">
           Message Body
@@ -72,7 +81,7 @@ export default function ProductContact(props) {
             Send
             <Send />
           </button>
-          <button className="btn" type="btn">
+          <button className="btn" type="reset">
             Clear
             <Cancel />
           </button>

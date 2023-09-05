@@ -1,19 +1,19 @@
 import { ArrowRightAlt } from "@mui/icons-material";
-import { specialProductsTest } from "../../data/home";
 import TextBlock from "../global/TextBlock";
 import FeatureArray from "./FeatureArray";
 
-export default function DarkParagraph() {
+export default function DarkParagraph({ data }) {
   return (
     <div className="dark-paragraph">
+      <img
+        src={`${window.location.origin}/images/${data.img.url}`}
+        alt={data.img.title}
+      />
       <div className="body-block">
-        <TextBlock
-          title="Find the right solution for you"
-          body="As well as providing full-scale solar conversions, we also have a variety of options available to suit your specific needs and budget."
-        />
-        <FeatureArray list={specialProductsTest} />
-        <a className="para-link" href="/products">
-          View Our Products
+        <TextBlock title={data.title} body={data.body} />
+        <FeatureArray list={data.itemLists} />
+        <a className="para-link" href={data.linkTo}>
+          {data.linkText}
           <ArrowRightAlt fontSize="large" />
         </a>
       </div>

@@ -25,7 +25,7 @@ export default function LightParagraph(props) {
             </a>
           )}
         </div>
-        <OffsetSquare url={props.image} />
+        <OffsetSquare url={props.image.url} title={props.image.title} />
       </div>
     </div>
   );

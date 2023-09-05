@@ -1,3 +1,4 @@
+import { kebabCase } from "lodash";
 import { useEffect } from "react";
 import Card from "./Card";
 
@@ -13,12 +14,15 @@ export default function CardTrack({
 
   function renderCards(card, i) {
     if (card.published) {
+      const kebabName = kebabCase(card.name);
+      const kebabCat = kebabCase(card.category);
+      // console.log(kebabCat);
       return (
         <Card
-          key={i}
+          key={card.id}
           imgUrl={card.img.url}
           name={card.name}
-          url={`products/${card.category}/${card.id}`}
+          url={`/products/${kebabCat}/${kebabName}`}
           price={card.price}
           title={card.title}
         />

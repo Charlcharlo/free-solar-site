@@ -1,10 +1,12 @@
 import { ArrowRightAlt } from "@mui/icons-material";
+import { kebabCase } from "lodash";
 
 export default function PreviewChapters({ info }) {
   const preview = info.plainText.substring(0, 150);
+  const kebabName = kebabCase(info.name);
   return (
     <div className="article-preview">
-      <a href={`/knowledge-base/${info.id}`}>
+      <a href={`/knowledge-base/${kebabName}`}>
         <img
           src={`https://freesolarza.co.za/images/articles/${info.img.url}`}
           alt={info.headerImage}
